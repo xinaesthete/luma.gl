@@ -91,7 +91,7 @@ export default class AppAnimationLoopTemplate extends AnimationLoopTemplate {
     // CREATE 3D TEXTURE
     const TEXTURE_DIMENSIONS = 16;
     const NOISE_DIMENSIONS = TEXTURE_DIMENSIONS * 0.07;
-    const textureData = new Uint8Array(TEXTURE_DIMENSIONS ** 3);
+    const textureData = new Float32Array(TEXTURE_DIMENSIONS ** 3);
     let textureIndex = 0;
     for (let i = 0; i < TEXTURE_DIMENSIONS; ++i) {
       for (let j = 0; j < TEXTURE_DIMENSIONS; ++j) {
@@ -112,7 +112,7 @@ export default class AppAnimationLoopTemplate extends AnimationLoopTemplate {
       width: TEXTURE_DIMENSIONS,
       height: TEXTURE_DIMENSIONS,
       depth: TEXTURE_DIMENSIONS,
-      format: 'r8unorm',
+      format: 'r32float',
       // mipmaps: true,
       sampler: {
         magFilter: 'nearest',
