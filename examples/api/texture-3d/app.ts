@@ -36,7 +36,7 @@ uniform sampler3D uTexture;
 uniform float uTime;
 out vec4 fragColor;
 void main() {
-  float alpha = texture(uTexture, vUV + vec3(0.0, 0.0, uTime)).r * 0.1;
+  float alpha = texture(uTexture, vUV + vec3(0.0, 0.0, uTime)).r * 2.0;
   fragColor = vec4(fract(vUV) * alpha, alpha);
 }`;
 
